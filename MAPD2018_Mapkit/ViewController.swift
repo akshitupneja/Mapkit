@@ -2,6 +2,8 @@
 //  ViewController.swift
 //  MAPD2018_Mapkit
 //
+//Author's Name : Santhosh Damodharan, Akshit Upneja, Aman Preet Kaur
+//StudentID : 300964037, 300976590, 300966930
 //  Created by Akshit Upneja on 2018-04-16.
 //  Copyright © 2018 Centennial College. All rights reserved.
 //
@@ -11,7 +13,12 @@ import MapKit
 
 class ViewController: UIViewController {
 
+    @IBAction func zoomIn(_ sender: UIButton) {
+    }
     @IBOutlet weak var mapView: MKMapView!
+    @IBAction func zoomOut(_ sender: UIButton) {
+        
+    }
     
     @IBOutlet weak var lattitude: UITextField!
     
@@ -40,12 +47,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+       
         let location = CLLocationCoordinate2D(latitude: 51.50007773,
                                               longitude: -0.1246402)
         
         // 2
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
+        mapView.showsCompass = true
         mapView.setRegion(region, animated: true)
         
         //3

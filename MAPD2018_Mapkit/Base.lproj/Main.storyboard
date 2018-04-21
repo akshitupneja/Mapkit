@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,19 +45,42 @@
                                     <action selector="goToLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDD-Kq-Ocu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnX-TY-P5t">
+                                <rect key="frame" x="334" y="599" width="60" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                <state key="normal" title="−"/>
+                                <connections>
+                                    <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VE-um-ULE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJT-hs-tAc">
+                                <rect key="frame" x="334" y="531" width="60" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtK-rQ-uis"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Pna-zv-WfD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="03D-id-T2a"/>
                             <constraint firstItem="m05-ld-65P" firstAttribute="leading" secondItem="Pna-zv-WfD" secondAttribute="trailing" constant="-405" id="04A-AE-riU"/>
                             <constraint firstItem="Pna-zv-WfD" firstAttribute="top" secondItem="bZl-6J-cpv" secondAttribute="bottom" constant="-50" id="5gl-fQ-VA1"/>
+                            <constraint firstItem="ZJT-hs-tAc" firstAttribute="leading" secondItem="Pna-zv-WfD" secondAttribute="trailing" constant="-80" id="DWl-d3-zpj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pna-zv-WfD" secondAttribute="bottom" id="Dyq-lh-haS"/>
+                            <constraint firstItem="ZJT-hs-tAc" firstAttribute="top" secondItem="Pna-zv-WfD" secondAttribute="bottom" constant="-205" id="H0C-LJ-fkU"/>
+                            <constraint firstItem="Pna-zv-WfD" firstAttribute="baseline" secondItem="ZJT-hs-tAc" secondAttribute="firstBaseline" constant="155.33333333333337" id="Kbb-dx-v5N"/>
                             <constraint firstItem="Pna-zv-WfD" firstAttribute="leading" secondItem="m05-ld-65P" secondAttribute="trailing" constant="-406" id="ONJ-H7-baW"/>
+                            <constraint firstItem="AnX-TY-P5t" firstAttribute="leading" secondItem="Pna-zv-WfD" secondAttribute="trailing" constant="-80" id="PY1-ug-oP5"/>
                             <constraint firstItem="Pna-zv-WfD" firstAttribute="leading" secondItem="bZl-6J-cpv" secondAttribute="trailing" constant="-406" id="R64-eQ-Fpi"/>
+                            <constraint firstItem="Pna-zv-WfD" firstAttribute="baseline" secondItem="ZJT-hs-tAc" secondAttribute="firstBaseline" constant="155.33333333333337" id="UhH-py-mYc"/>
                             <constraint firstItem="Pna-zv-WfD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6L-0l-d5n"/>
                             <constraint firstItem="bZl-6J-cpv" firstAttribute="leading" secondItem="Pna-zv-WfD" secondAttribute="trailing" constant="-405" id="fZV-bR-7hc"/>
                             <constraint firstItem="m05-ld-65P" firstAttribute="top" secondItem="bZl-6J-cpv" secondAttribute="bottom" constant="8" id="nR0-lG-gf3"/>
+                            <constraint firstItem="AnX-TY-P5t" firstAttribute="top" secondItem="ZJT-hs-tAc" secondAttribute="bottom" constant="8" id="rC0-x7-l1g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pna-zv-WfD" secondAttribute="trailing" id="wVx-H8-Esy"/>
+                            <constraint firstItem="AnX-TY-P5t" firstAttribute="top" secondItem="Pna-zv-WfD" secondAttribute="bottom" constant="-137" id="z9l-kK-QVT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -68,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36.231884057971016" y="32.608695652173914"/>
+            <point key="canvasLocation" x="-323" y="-11"/>
         </scene>
     </scenes>
 </document>
