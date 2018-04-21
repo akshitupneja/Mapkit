@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MAPD2018_Mapkit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pna-zv-WfD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude 51.50007773 etc" minimumFontSize="22" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bZl-6J-cpv">
+                                <rect key="frame" x="9" y="17" width="397" height="33"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude -0.1246402 etc" minimumFontSize="22" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m05-ld-65P">
+                                <rect key="frame" x="9" y="58" width="397" height="33"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6w-fs-JZ8">
+                                <rect key="frame" x="9" y="107" width="397" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Go to Location">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDD-Kq-Ocu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pna-zv-WfD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="03D-id-T2a"/>
+                            <constraint firstItem="m05-ld-65P" firstAttribute="leading" secondItem="Pna-zv-WfD" secondAttribute="trailing" constant="-405" id="04A-AE-riU"/>
+                            <constraint firstItem="Pna-zv-WfD" firstAttribute="top" secondItem="bZl-6J-cpv" secondAttribute="bottom" constant="-50" id="5gl-fQ-VA1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pna-zv-WfD" secondAttribute="bottom" id="Dyq-lh-haS"/>
+                            <constraint firstItem="Pna-zv-WfD" firstAttribute="leading" secondItem="m05-ld-65P" secondAttribute="trailing" constant="-406" id="ONJ-H7-baW"/>
+                            <constraint firstItem="Pna-zv-WfD" firstAttribute="leading" secondItem="bZl-6J-cpv" secondAttribute="trailing" constant="-406" id="R64-eQ-Fpi"/>
+                            <constraint firstItem="Pna-zv-WfD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W6L-0l-d5n"/>
+                            <constraint firstItem="bZl-6J-cpv" firstAttribute="leading" secondItem="Pna-zv-WfD" secondAttribute="trailing" constant="-405" id="fZV-bR-7hc"/>
+                            <constraint firstItem="m05-ld-65P" firstAttribute="top" secondItem="bZl-6J-cpv" secondAttribute="bottom" constant="8" id="nR0-lG-gf3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pna-zv-WfD" secondAttribute="trailing" id="wVx-H8-Esy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lattitude" destination="bZl-6J-cpv" id="oFX-xG-H9e"/>
+                        <outlet property="longitude" destination="m05-ld-65P" id="UbY-EK-CBp"/>
+                        <outlet property="mapView" destination="Pna-zv-WfD" id="f6A-lY-jfW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36.231884057971016" y="32.608695652173914"/>
         </scene>
     </scenes>
 </document>
